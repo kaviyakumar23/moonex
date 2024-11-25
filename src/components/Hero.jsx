@@ -1,4 +1,10 @@
+import Header from "./Header";
+
 const Hero = () => {
-  return <></>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 export default Hero;
