@@ -5,7 +5,7 @@ import ellipseBgBottom from "../assets/ellipsebottom.png";
 
 const Hero = () => {
   return (
-    <div className="relative h-[110vh] overflow-hidden">
+    <div className="relative h-[110vh]">
       <div className="absolute z-[998] top-0 left-0">
         <img src={ellipseBgTop} className="opacity-30" />
       </div>

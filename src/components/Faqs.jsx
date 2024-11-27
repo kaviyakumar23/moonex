@@ -26,7 +26,7 @@ const Faqs = () => {
   ];
 
   return (
-    <div className=" relative py-12 px-4 md:px-6 overflow-hidden">
+    <div className=" relative py-12 px-4 md:px-6 ">
       <div className="absolute z-[998] -bottom-80 -left-40 ">
         <img src={ellipseFaq1} className="opacity-30" />
       </div>

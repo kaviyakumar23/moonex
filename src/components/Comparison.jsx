@@ -18,7 +18,7 @@ const Comparison = () => {
   ];
 
   return (
-    <div className="relative px-4 py-6 lg:px-16 text-white overflow-hidden">
+    <div className="relative px-4 py-6 lg:px-16 text-white ">
       <div className="absolute z-[998] top-0 left-0">
         <img src={ellipseCenter} className="opacity-30" />
       </div>
