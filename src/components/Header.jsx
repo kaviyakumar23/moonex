@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { useState } from "react";
+import { Dialog, DialogPanel, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 import Button from "./shared/Button";
 import logo from "../assets/logo.svg";
 
@@ -39,7 +40,11 @@ const Header = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <img className="w-auto mt-2" src={logo} alt="Moonex Logo"></img>
+            <img
+              className="w-auto mt-2 animate-fadeIn"
+              src={logo}
+              alt="Moonex Logo"
+            />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -84,62 +89,85 @@ const Header = () => {
           <Button variant="filled">Connect Wallet</Button>
         </div>
       </nav>
-      <Dialog
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#071624] px-6 pb-6 pt-8 sm:pt-12 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Moonex</span>
-              <img className="sm:hidden w-auto" src={logo} alt="" />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <svg
-                className="size-6 text-custom-base"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navigationLinks.map((link) => (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800 w-full text-left"
+
+      <Transition show={mobileMenuOpen} as={Fragment}>
+        <Dialog onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div
+              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+              aria-hidden="true"
+            />
+          </Transition.Child>
+
+          <Transition.Child
+            as={Fragment}
+            enter="transform transition ease-out duration-300"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transform transition ease-in duration-200"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full"
+          >
+            <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#071624] px-6 pb-6 pt-8 sm:pt-12 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div className="flex items-center justify-between">
+                <a href="#" className="-m-1.5 p-1.5">
+                  <span className="sr-only">Moonex</span>
+                  <img className="sm:hidden w-auto" src={logo} alt="" />
+                </a>
+                <button
+                  type="button"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700 transition-colors hover:text-gray-500"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <svg
+                    className="size-6 text-custom-base"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
                   >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
-              <div className="py-6">
-                <button className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-gray-800 w-full text-left">
-                  Connect Wallet
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
                 </button>
               </div>
-            </div>
-          </div>
-        </DialogPanel>
-      </Dialog>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    {navigationLinks.map((link) => (
+                      <button
+                        key={link.id}
+                        onClick={() => scrollToSection(link.id)}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800 transition-colors duration-200 w-full text-left"
+                      >
+                        {link.label}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="py-6">
+                    <button className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-gray-800 transition-colors duration-200 w-full text-left">
+                      Connect Wallet
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </DialogPanel>
+          </Transition.Child>
+        </Dialog>
+      </Transition>
     </header>
   );
 };
