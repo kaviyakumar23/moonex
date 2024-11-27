@@ -21,7 +21,7 @@ const Comparison = () => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("comparison-section");
+    const element = document.getElementById("about");
     if (element) {
       observer.observe(element);
     }
@@ -42,10 +42,7 @@ const Comparison = () => {
   ];
 
   return (
-    <div
-      id="comparison-section"
-      className="relative px-4 py-6 lg:px-16 text-white"
-    >
+    <div id="about" className="relative px-4 py-6 lg:px-16 text-white">
       <div className="absolute z-[10] top-0 left-0">
         <img
           src={ellipseCenter}

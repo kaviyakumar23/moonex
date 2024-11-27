@@ -17,7 +17,7 @@ const Footer = () => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("footer-section");
+    const element = document.getElementById("contact");
     if (element) {
       observer.observe(element);
     }
@@ -58,7 +58,7 @@ const Footer = () => {
 
   return (
     <footer
-      id="footer-section"
+      id="contact"
       className={`bg-[#051422] transition-opacity duration-1000 ease-out ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}

@@ -22,7 +22,7 @@ const Faqs = () => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("faqs-section");
+    const element = document.getElementById("faqs");
     if (element) {
       observer.observe(element);
     }
@@ -51,7 +51,7 @@ const Faqs = () => {
   ];
 
   return (
-    <div id="faqs-section" className="relative py-12 px-4 md:px-6">
+    <div id="faqs" className="relative py-12 px-4 md:px-6">
       <div className="absolute z-[10] -bottom-80 -left-40">
         <img
           src={ellipseFaq1}

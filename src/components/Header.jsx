@@ -18,22 +18,23 @@ const Header = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const headerHeight = 80;
-      const elementPosition = section.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
       setMobileMenuOpen(false);
+      setTimeout(() => {
+        const headerHeight = 80;
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 300);
     }
   };
 
   return (
-    <header className="relative inset-x-0 top-0 z-40">
+    <header className="fixed inset-x-0 top-0 z-40">
       <nav
         className="flex items-center justify-between px-6 py-6 lg:px-16 bg-none"
         aria-label="Global"
@@ -75,7 +76,7 @@ const Header = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-base font-semibold cursor-pointer  ${
+              className={`text-base font-semibold cursor-pointer ${
                 link.isActive
                   ? "text-primary"
                   : "text-white hover:text-white/80 transition-colors"
@@ -116,35 +117,37 @@ const Header = () => {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#071624] px-6 pb-6 pt-8 sm:pt-12 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Moonex</span>
-                  <img className="sm:hidden w-auto" src={logo} alt="" />
-                </a>
-                <button
-                  type="button"
-                  className="-m-2.5 rounded-md p-2.5 text-gray-700 transition-colors hover:text-gray-500"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span className="sr-only">Close menu</span>
-                  <svg
-                    className="size-6 text-custom-base"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
+            <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#071624] px-6 pb-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div className="sticky top-0 bg-[#071624] pt-8 sm:pt-12 pb-4 z-10">
+                <div className="flex items-center justify-between">
+                  <a href="#" className="-m-1.5 p-1.5">
+                    <span className="sr-only">Moonex</span>
+                    <img className="sm:hidden w-auto" src={logo} alt="" />
+                  </a>
+                  <button
+                    type="button"
+                    className="-m-2.5 rounded-md p-2.5 text-gray-700 transition-colors hover:text-gray-500"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+                    <span className="sr-only">Close menu</span>
+                    <svg
+                      className="size-6 text-custom-base"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div className="mt-6 flow-root">
+              <div className="mt-2 flow-root h-[calc(100vh-120px)] overflow-y-auto">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
                     {navigationLinks.map((link) => (
