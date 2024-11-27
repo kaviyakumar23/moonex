@@ -13,6 +13,8 @@ export default {
         "custom-base": "#EDD955",
         "custom-header": "#E4B40D",
         "custom-border": "rgba(217, 217, 217, 0.1)",
+        "custom-white": "#ECF1F0",
+        "custom-grey": "#B6B6B6",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -58,6 +60,7 @@ export default {
         raleway: ["Raleway", "sans-serif"],
         fira: ['"Fira Code"', "monospace"],
         audiowide: ["Audiowide", "cursive"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
