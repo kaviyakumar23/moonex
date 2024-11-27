@@ -5,6 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import ellipseFaq1 from "../assets/ellipsefaq.png";
+import ellipseBottom from "../assets/ellipsebottom.png";
 
 const Faqs = () => {
   const faqData = [
@@ -24,7 +26,13 @@ const Faqs = () => {
   ];
 
   return (
-    <div className="py-12 px-4 md:px-6">
+    <div className=" relative py-12 px-4 md:px-6 overflow-hidden">
+      <div className="absolute z-[998] -bottom-80 -left-40 ">
+        <img src={ellipseFaq1} className="opacity-30" />
+      </div>
+      <div className="absolute z-[998] -right-96 -top-96 ">
+        <img src={ellipseBottom} className="opacity-30" />
+      </div>
       <div className="max-w-4xl mx-auto">
         <Card className="bg-slate-900/50  border-none py-4">
           <div className="flex justify-center">

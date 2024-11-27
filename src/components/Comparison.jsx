@@ -5,6 +5,8 @@ import UniSwapLogo from "../assets/uniswap-logo.svg";
 import check from "../assets/check.svg";
 import close from "../assets/close.svg";
 import SectionHeader from "./shared/SectionHeader";
+import ellipseCenter from "../assets/ellipsecenter.png";
+import ellipseBgBottom from "../assets/ellipsebottom.png";
 
 const Comparison = () => {
   const comparisonPoints = [
@@ -16,7 +18,13 @@ const Comparison = () => {
   ];
 
   return (
-    <div className="px-4 py-6 lg:px-16 text-white">
+    <div className="relative px-4 py-6 lg:px-16 text-white overflow-hidden">
+      <div className="absolute z-[998] top-0 left-0">
+        <img src={ellipseCenter} className="opacity-30" />
+      </div>
+      <div className="absolute z-[998] -right-96  -top-64">
+        <img src={ellipseBgBottom} className="opacity-30" />
+      </div>
       <SectionHeader text="Why MoonEX?" />
 
       <div className="p-4 mdx:p-6">
