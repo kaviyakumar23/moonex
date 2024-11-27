@@ -53,10 +53,20 @@ const Faqs = () => {
   return (
     <div id="faqs-section" className="relative py-12 px-4 md:px-6">
       <div className="absolute z-[10] -bottom-80 -left-40">
-        <img src={ellipseFaq1} loading="lazy" className="opacity-30" />
+        <img
+          src={ellipseFaq1}
+          loading="lazy"
+          className="opacity-30"
+          alt="FAQ background"
+        />
       </div>
       <div className="absolute z-[10] -right-96 -top-96">
-        <img src={ellipseBottom} loading="lazy" className="opacity-30" />
+        <img
+          src={ellipseBottom}
+          loading="lazy"
+          className="opacity-30"
+          alt="Bottom background"
+        />
       </div>
       <div className="max-w-4xl mx-auto">
         <Card
@@ -98,19 +108,11 @@ const Faqs = () => {
                     transitionDelay: `${500 + index * 100}ms`,
                   }}
                 >
-                  <AccordionTrigger
-                    className="text-white font-raleway hover:text-white/90 text-base md:text-lg font-medium
-                      transition-all duration-300 ease-in-out hover:scale-[1.01] group"
-                  >
-                    <span className="group-hover:pl-2 transition-all duration-300">
-                      {faq.question}
-                    </span>
+                  <AccordionTrigger className="text-white font-raleway hover:text-white/90 text-base md:text-lg font-medium transition-transform duration-300 ease-in-out hover:scale-[1.01] group">
+                    <span className="group-hover:pl-2 ">{faq.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent
-                    className="text-faq-answer font-raleway text-sm md:text-base
-                      transition-all duration-300 data-[state=open]:animate-fadeIn"
-                  >
-                    {faq.answer}
+                  <AccordionContent className="text-faq-answer font-raleway text-sm md:text-base transition-[height] duration-300">
+                    <div className="py-2">{faq.answer}</div>
                   </AccordionContent>
                 </AccordionItem>
               ))}
