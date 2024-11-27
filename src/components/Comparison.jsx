@@ -19,10 +19,10 @@ const Comparison = () => {
 
   return (
     <div id="about" className="relative px-4 py-6 lg:px-16 text-white ">
-      <div className="absolute z-[998] top-0 left-0">
+      <div className="absolute z-[10] top-0 left-0">
         <img src={ellipseCenter} className="opacity-30" />
       </div>
-      <div className="absolute z-[998] -right-96  -top-64">
+      <div className="absolute z-[10] -right-96  -top-64">
         <img src={ellipseBgBottom} className="opacity-30" />
       </div>
       <SectionHeader text="Why MoonEX?" />

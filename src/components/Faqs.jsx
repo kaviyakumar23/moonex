@@ -27,14 +27,14 @@ const Faqs = () => {
 
   return (
     <div id="faqs" className=" relative py-12 px-4 md:px-6 ">
-      <div className="absolute z-[998] -bottom-80 -left-40 ">
+      <div className="absolute z-[10] -bottom-80 -left-40 ">
         <img src={ellipseFaq1} className="opacity-30" />
       </div>
-      <div className="absolute z-[998] -right-96 -top-96 ">
+      <div className="absolute z-[10] -right-96 -top-96 ">
         <img src={ellipseBottom} className="opacity-30" />
       </div>
       <div className="max-w-4xl mx-auto">
-        <Card className="bg-slate-900/50  border-none py-4">
+        <Card className="bg-white/5 relative z-[20] backdrop-blur-md border-none shadow-2xl py-4">
           <div className="flex justify-center">
             <h1 className="text-2xl md:text-3xl font-bold text-custom-header font-fira">
               FAQs
