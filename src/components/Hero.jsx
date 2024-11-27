@@ -2,6 +2,9 @@ import Header from "./Header";
 import Button from "./shared/Button";
 import ellipseBgTop from "../assets/ellipsetop.png";
 import ellipseBgBottom from "../assets/ellipsebottom.png";
+import sphere from "../assets/hero/sphere.png";
+import star1 from "../assets/hero/star-1.svg";
+import star2 from "../assets/hero/star-2.svg";
 
 const Hero = () => {
   return (
@@ -9,23 +12,23 @@ const Hero = () => {
       <div className="absolute h-[110vh] z-[10] inset-0 bg-[url('/src/assets/hero/circles.png')] bg-cover bg-center bg-no-repeat pointer-events-none animate-pulse" />
 
       <img
-        src={"/src/assets/hero/sphere.png"}
+        src={sphere}
         className="hidden md:block absolute z-[10] h-40 lg:h-52 right-16 xl:right-48 lg:right-28 top-60 lg:top-80 
         animate-float"
       />
 
       <img
-        src={"/src/assets/hero/star-1.svg"}
+        src={star1}
         className="absolute z-[10] w-6 md:w-auto top-40 lg:h-14 h-6 md:top-64 left-10 md:left-48 
         animate-bounce"
       />
       <img
-        src={"/src/assets/hero/star-1.svg"}
+        src={star1}
         className="absolute z-[10] w-6 md:w-auto bottom-40 lg:h-14 h-6 md:bottom-80 right-8 md:right-60 
         animate-bounce delay-300"
       />
       <img
-        src={"/src/assets/hero/star-2.svg"}
+        src={star2}
         className="absolute z-[10] w-6 md:w-auto right-10 lg:h-14 h-6 md:right-60 top-20 md:top-40 
         animate-bounce delay-500"
       />
