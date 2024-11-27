@@ -6,8 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
-import ellipseFaq1 from "../assets/ellipsefaq.png";
-import ellipseBottom from "../assets/ellipsebottom.png";
+import ellipseFaq1 from "../assets/ellipsefaq.webp";
+import ellipseBottom from "../assets/ellipsebottom.webp";
 
 const Faqs = () => {
   const [isVisible, setIsVisible] = useState(false);

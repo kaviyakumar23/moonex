@@ -5,8 +5,8 @@ import UniSwapLogo from "../assets/uniswap-logo.svg";
 import check from "../assets/check.svg";
 import close from "../assets/close.svg";
 import SectionHeader from "./shared/SectionHeader";
-import ellipseCenter from "../assets/ellipsecenter.png";
-import ellipseBgBottom from "../assets/ellipsebottom.png";
+import ellipseCenter from "../assets/ellipsecenter.webp";
+import ellipseBgBottom from "../assets/ellipsebottom.webp";
 
 const Comparison = () => {
   const [isVisible, setIsVisible] = useState(false);
