@@ -71,7 +71,7 @@ const Faqs = () => {
       <div className="max-w-4xl mx-auto">
         <Card
           className={`bg-white/5 relative z-[20] backdrop-blur-md border-none shadow-2xl py-4
-            transform transition-all duration-700 ease-out
+            transform transition-all duration-500 ease-out
             ${
               isVisible
                 ? "translate-y-0 opacity-100 scale-100"
@@ -80,7 +80,7 @@ const Faqs = () => {
           `}
         >
           <div
-            className={`flex justify-center transform transition-all duration-500 delay-300
+            className={`flex justify-center transform transition-all duration-300 delay-200
             ${
               isVisible
                 ? "translate-y-0 opacity-100"
@@ -97,7 +97,7 @@ const Faqs = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className={`border-custom-border px-14 py-4 transform transition-all duration-500
+                  className={`border-custom-border px-14 py-4 transform transition-all duration-300
                     ${
                       isVisible
                         ? "translate-y-0 opacity-100"
@@ -105,7 +105,7 @@ const Faqs = () => {
                     }
                   `}
                   style={{
-                    transitionDelay: `${500 + index * 100}ms`,
+                    transitionDelay: `${300 + index * 100}ms`,
                   }}
                 >
                   <AccordionTrigger className="text-white font-raleway hover:text-white/90 text-base md:text-lg font-medium transition-transform duration-300 ease-in-out hover:scale-[1.01] group">
