@@ -3,7 +3,7 @@ import Button from "./shared/Button";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-[110vh]">
       <Header />
       <div className="absolute inset-0 flex flex-col justify-center xl:max-w-6xl lg:max-w-2xl items-start px-8 lg:left-20 md:left-10 font-fira">
         <h1 className="md:text-7xl text-4xl font-extrabold text-white mb-4 text-left">

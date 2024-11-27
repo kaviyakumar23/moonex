@@ -11,6 +11,8 @@ export default {
       },
       colors: {
         "custom-base": "#EDD955",
+        "custom-header": "#E4B40D",
+        "custom-border": "rgba(217, 217, 217, 0.1)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -55,6 +57,7 @@ export default {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
         fira: ['"Fira Code"', "monospace"],
+        audiowide: ["Audiowide", "cursive"],
       },
     },
   },
