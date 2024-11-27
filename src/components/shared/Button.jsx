@@ -8,7 +8,8 @@ const Button = ({
   disabled = false,
 }) => {
   const baseStyles =
-    " py-3 px-6 rounded-full text-lg font-bold transition-all duration-200 focus:outline-none font-raleway";
+    " py-2 px-5 rounded-full text-base font-bold transition-all duration-200 focus:outline-none font-raleway" +
+    " sm:py-3 sm:px-8 sm:text-lg";
 
   const customStyles = {
     filled: `
