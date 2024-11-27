@@ -69,6 +69,7 @@ const Footer = () => {
             <img
               src={moonexLogo}
               alt="MoonEx"
+              loading="lazy"
               className="h-28 cursor-pointer"
             />
           </div>
@@ -101,6 +102,7 @@ const Footer = () => {
                   <div className="absolute inset-0 bg-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
                   <img
                     src={social.icon}
+                    loading="lazy"
                     className="w-6 h-6 relative z-10 transition-transform duration-300 group-hover:scale-105"
                     alt={social.label}
                   />

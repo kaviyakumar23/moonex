@@ -53,10 +53,10 @@ const Faqs = () => {
   return (
     <div id="faqs-section" className="relative py-12 px-4 md:px-6">
       <div className="absolute z-[10] -bottom-80 -left-40">
-        <img src={ellipseFaq1} className="opacity-30" />
+        <img src={ellipseFaq1} loading="lazy" className="opacity-30" />
       </div>
       <div className="absolute z-[10] -right-96 -top-96">
-        <img src={ellipseBottom} className="opacity-30" />
+        <img src={ellipseBottom} loading="lazy" className="opacity-30" />
       </div>
       <div className="max-w-4xl mx-auto">
         <Card

@@ -88,6 +88,7 @@ const Features = () => {
                 <img
                   src={feature.icon}
                   alt={feature.title}
+                  loading="lazy"
                   className={`h-16 w-16 transition-transform duration-500 ${
                     isVisible ? "scale-100" : "scale-0"
                   }`}

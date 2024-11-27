@@ -47,10 +47,20 @@ const Comparison = () => {
       className="relative px-4 py-6 lg:px-16 text-white"
     >
       <div className="absolute z-[10] top-0 left-0">
-        <img src={ellipseCenter} className="opacity-30" />
+        <img
+          src={ellipseCenter}
+          className="opacity-30"
+          loading="lazy"
+          alt="Background ellipse"
+        />
       </div>
       <div className="absolute z-[10] -right-96 -top-64">
-        <img src={ellipseBgBottom} className="opacity-30" />
+        <img
+          src={ellipseBgBottom}
+          className="opacity-30"
+          loading="lazy"
+          alt="Background ellipse bottom"
+        />
       </div>
 
       <div
@@ -81,6 +91,7 @@ const Comparison = () => {
                     src={moonexLogo}
                     alt="MoonEX Logo"
                     className="h-8 sm:h-8 lg:h-12"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -90,6 +101,7 @@ const Comparison = () => {
                     src={UniSwapLogo}
                     alt="Uniswap Logo"
                     className="h-5 sm:h-6 lg:h-8"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -123,6 +135,8 @@ const Comparison = () => {
                     <img
                       src={check}
                       className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+                      loading="lazy"
+                      alt="Check mark"
                     />
                   </div>
                   <div
@@ -139,6 +153,8 @@ const Comparison = () => {
                     <img
                       src={close}
                       className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+                      loading="lazy"
+                      alt="Close mark"
                     />
                   </div>
                 </Fragment>

@@ -15,17 +15,17 @@ const Hero = () => {
       />
 
       <img
-        src={"/src/assets/hero/star-1.png"}
+        src={"/src/assets/hero/star-1.svg"}
         className="absolute z-[10] w-6 md:w-auto top-40 lg:h-14 h-6 md:top-64 left-10 md:left-48 
         animate-bounce"
       />
       <img
-        src={"/src/assets/hero/star-1.png"}
+        src={"/src/assets/hero/star-1.svg"}
         className="absolute z-[10] w-6 md:w-auto bottom-40 lg:h-14 h-6 md:bottom-80 right-8 md:right-60 
         animate-bounce delay-300"
       />
       <img
-        src={"/src/assets/hero/star-2.png"}
+        src={"/src/assets/hero/star-2.svg"}
         className="absolute z-[10] w-6 md:w-auto right-10 lg:h-14 h-6 md:right-60 top-20 md:top-40 
         animate-bounce delay-500"
       />
