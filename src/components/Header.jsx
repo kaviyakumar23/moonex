@@ -70,8 +70,10 @@ const Header = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-base font-semibold cursor-pointer ${
-                link.isActive ? "text-primary" : "text-white"
+              className={`text-base font-semibold cursor-pointer  ${
+                link.isActive
+                  ? "text-primary"
+                  : "text-white hover:text-white/80 transition-colors"
               }`}
             >
               {link.label}
