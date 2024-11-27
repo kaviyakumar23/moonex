@@ -4,6 +4,7 @@ import moonexLogo from "../assets/moonex-logo-small.svg";
 import UniSwapLogo from "../assets/uniswap-logo.svg";
 import check from "../assets/check.svg";
 import close from "../assets/close.svg";
+import SectionHeader from "./shared/SectionHeader";
 
 const Comparison = () => {
   const comparisonPoints = [
@@ -16,9 +17,7 @@ const Comparison = () => {
 
   return (
     <div className="px-4 py-6 lg:px-16 text-white">
-      <h1 className="px-4 py-5 lg:px-16 font-fira text-2xl md:text-4xl lg:text-5xl font-extrabold">
-        Why <span className="text-custom-header pr-1">MoonEX</span>?
-      </h1>
+      <SectionHeader text="Why MoonEX?" />
 
       <div className="p-4 mdx:p-6">
         <Card className="bg-white/5 backdrop-blur-md border-none shadow-2xl">
