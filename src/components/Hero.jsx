@@ -2,14 +2,14 @@ import Header from "./Header";
 import Button from "./shared/Button";
 import ellipseBgTop from "../assets/ellipsetop.webp";
 import ellipseBgBottom from "../assets/ellipsebottom.webp";
-import sphere from "../assets/hero/sphere.png";
+import sphere from "../assets/hero/sphere.webp";
 import star1 from "../assets/hero/star-1.svg";
 import star2 from "../assets/hero/star-2.svg";
 
 const Hero = () => {
   return (
     <div className="relative h-[110vh]">
-      <div className="absolute h-[110vh] z-[10] inset-0 bg-[url('/src/assets/hero/circles.png')] bg-cover bg-center bg-no-repeat pointer-events-none animate-pulse" />
+      <div className="absolute h-[110vh] z-[10] inset-0 bg-[url('/src/assets/hero/circles.webp')] bg-cover bg-center bg-no-repeat pointer-events-none animate-pulse" />
 
       <img
         src={sphere}
