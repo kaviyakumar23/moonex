@@ -15,6 +15,7 @@ export default {
         "custom-border": "rgba(217, 217, 217, 0.1)",
         "custom-white": "#ECF1F0",
         "custom-grey": "#B6B6B6",
+        "faq-answer": "#BAB8B8",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -58,9 +59,31 @@ export default {
       },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
-        fira: ['"Fira Code"', "monospace"],
+        fira: ['Fira Code"', "monospace"],
         audiowide: ["Audiowide", "cursive"],
         roboto: ["Roboto", "sans-serif"],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
