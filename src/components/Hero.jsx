@@ -15,26 +15,30 @@ const Hero = () => {
         src={sphere}
         className="hidden md:block absolute z-[10] h-40 lg:h-52 right-16 xl:right-48 lg:right-28 top-60 lg:top-80 
         animate-float"
+        alt="Sphere"
       />
 
       <img
         src={star1}
         className="absolute z-[10] w-6 md:w-auto top-40 lg:h-14 h-6 md:top-64 left-10 md:left-48 
         animate-bounce"
+        alt="Star"
       />
       <img
         src={star1}
         className="absolute z-[10] w-6 md:w-auto bottom-40 lg:h-14 h-6 md:bottom-80 right-8 md:right-60 
         animate-bounce delay-300"
+        alt="Star"
       />
       <img
         src={star2}
         className="absolute z-[10] w-6 md:w-auto right-10 lg:h-14 h-6 md:right-60 top-20 md:top-40 
         animate-bounce delay-500"
+        alt="Star"
       />
 
       <div className="absolute z-10 top-0 left-0">
-        <img src={ellipseBgTop} className="opacity-30" />
+        <img src={ellipseBgTop} className="opacity-30" alt="Ellipse" />
       </div>
 
       <Header />
@@ -56,7 +60,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute z-10 bottom-0 right-0">
-        <img src={ellipseBgBottom} className="opacity-30" />
+        <img src={ellipseBgBottom} className="opacity-30" alt="Ellipse" />
       </div>
     </div>
   );

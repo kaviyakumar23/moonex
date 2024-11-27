@@ -122,7 +122,11 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                   <a href="#" className="-m-1.5 p-1.5">
                     <span className="sr-only">Moonex</span>
-                    <img className="sm:hidden w-auto" src={logo} alt="" />
+                    <img
+                      className="sm:hidden w-auto"
+                      src={logo}
+                      alt="Moonex Logo"
+                    />
                   </a>
                   <button
                     type="button"
